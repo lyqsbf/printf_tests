@@ -1,18 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test.c                                             :+:      :+:    :+:   */
+/*   test_specific_cases.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yaqliu <yaqliu@student.42barcelona.co      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/09 17:24:53 by yaqliu            #+#    #+#             */
-/*   Updated: 2025/11/10 18:17:54 by yaqliu           ###   ########.fr       */
+/*   Created: 2025/12/06 11:36:10 by yaqliu            #+#    #+#             */
+/*   Updated: 2025/12/06 11:38:21 by yaqliu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include <stdio.h>
 #include <limits.h>
+
+/*
+The idea of this test file is to look at some
+specific cases with the flags %c%s%p%d%i%u%x%X%%
+and edge cases
+*/
 
 // --- Define colors ---
 #define RESET   "\033[0m"

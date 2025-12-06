@@ -1,9 +1,24 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   test_general.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: yaqliu <yaqliu@student.42barcelona.co      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/12/06 11:38:51 by yaqliu            #+#    #+#             */
+/*   Updated: 2025/12/06 11:40:08 by yaqliu           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdio.h>
 #include "ft_printf.h"
 
-int	ft_printf(char const *str, ...);
+/*
+The idea of this test file is to look at some simple/basic cases
+*/
 
-int main(){
+int	main(void)
+{
 	int	n = 42;
 	int	*ptr = &n;
 	void	*p = NULL;
