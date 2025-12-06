@@ -50,10 +50,10 @@ Una vez que tengas `libftprintf.a` lista, puedes compilar el archivo de pruebas 
 
 ```bash
 cc nombre_del_test.c -L. -lftprintf -o test_runner
-
+```
 ---
 
-## **⚠️ Sustituye** `nombre_del_test.c` por el nombre del archivo de prueba que desees ejecutar (ej: `test_general.c`).
+**⚠️ Sustituye** `nombre_del_test.c` por el nombre del archivo de prueba que desees ejecutar (ej: `test_general.c`).
 
 ## 💡 Explicación del Enlazado
 
