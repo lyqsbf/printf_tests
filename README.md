@@ -1,75 +1,52 @@
 # 🧪 ft_printf Tester
 
-Esta es una **suite de pruebas robusta y en constante crecimiento** diseñada para verificar la exactitud, el manejo de errores y el comportamiento de la implementación de tu función `ft_printf`, comparándola rigurosamente con la función estándar `printf` de la librería de C.
+This is a **robust and constantly growing test suite** designed to verify the accuracy, error handling, and behavior of your `ft_printf` function implementation, rigorously comparing it against the standard C library function `printf`.
 
 ---
 
-## 🎯 Cobertura de Tests
+## 🎯 Test Coverage
 
-El objetivo de esta suite es garantizar que tu `ft_printf` sea 100% funcional y fiel al comportamiento de la versión original.
+The goal of this suite is to ensure your `ft_printf` is 100% functional and faithful to the behavior of the original C function.
 
-### 1. Especificadores de Formato
+### 1. Format Specifiers
 
-Se prueban exhaustivamente los siguientes tipos de conversión:
+The following conversion types are exhaustively tested:
 
-| Especificador | Tipo de Argumento | Descripción |
+| Specifier | Argument Type | Description |
 | :--- | :--- | :--- |
-| `%c` | `char` | Carácter |
-| `%s` | `char *` | Cadena de caracteres (incluyendo `NULL`) |
-| `%p` | `void *` | Puntero (en formato hexadecimal) |
-| `%d` / `%i` | `int` | Entero con signo |
-| `%u` | `unsigned int` | Entero sin signo |
-| `%x` / `%X` | `unsigned int` | Hexadecimal (minúsculas/MAYÚSCULAS) |
-| `%%` | N/A | Carácter de porcentaje literal |
+| `%c` | `char` | Character |
+| `%s` | `char *` | String of characters (including `NULL`) |
+| `%p` | `void *` | Pointer (in hexadecimal format) |
+| `%d` / `%i` | `int` | Signed Integer |
+| `%u` | `unsigned int` | Unsigned Integer |
+| `%x` / `%X` | `unsigned int` | Hexadecimal (lowercase/UPPERCASE) |
+| `%%` | N/A | Literal percent character |
 
-### 2. Casos Límite (Edge Cases)
+### 2. Edge Cases
 
-Se evalúan situaciones críticas como:
-* Manejo de valores `INT_MIN` y `INT_MAX`.
-* Punteros `NULL`.
-* Cadenas vacías y nulas.
-* Combinaciones complejas de *flags* y precisión.
+Critical situations are evaluated, including:
+* Handling of `INT_MIN` and `INT_MAX` values.
+* `NULL` pointers.
+* Empty and null strings.
+* Complex combinations of flags and precision.
 
 ---
 
-## ⚙️ Uso e Integración
+## ⚙️ Usage and Integration
 
-### 1. Requisitos
+### 1. Requirements
 
-Asegúrate de que tu `ft_printf` esté compilada en un archivo llamado **`libftprintf.a`** y que su prototipo esté disponible en un archivo de cabecera llamado **`ft_printf.h`**. Ambos archivos deben estar ubicados en el **directorio raíz** de este repositorio de tests.
+Ensure your `ft_printf` is compiled into a file named **`libftprintf.a`** and that its prototype is available in a header file named **`ft_printf.h`**. Both files must be located in the **root directory** of this test repository.
 
-### 2. Compilación y Enlazado (Linking)
+### 2. Compilation and Linking
 
-#### 2.1. Preparación de la Librería
+#### 2.1. Library Preparation
 
-Asegúrate de haber ejecutado previamente el comando `make` en tu repositorio de `ft_printf` para generar el archivo **`libftprintf.a`**.
+Make sure you have previously run the `make` command in your `ft_printf` repository to generate the **`libftprintf.a`** file.
 
-#### 2.2. Enlazado de los Tests
+#### 2.2. Linking the Tests
 
-Una vez que tengas `libftprintf.a` lista, puedes compilar el archivo de pruebas y **enlazarlo** con tu librería usando el siguiente comando:
+Once `libftprintf.a` is ready, you can compile the test file and **link** it with your library using the following command:
 
 ```bash
-cc nombre_del_test.c -L. -lftprintf -o test_runner
-```
-
-**⚠️ Sustituye** `nombre_del_test.c` por el nombre del archivo de prueba que desees ejecutar (ej: `test_general.c`).
-
----
-
-## 💡 Explicación del Enlazado
-
-El uso de las banderas `-L` y `-l` es crucial para evitar el error `undefined reference to 'ft_printf'`.
-
-| Bandera | Propósito | Explicación |
-| :--- | :--- | :--- |
-| **`-L.`** | Ruta de Librería | Indica al enlazador que busque librerías estáticas en el **directorio actual** (`.`). |
-| **`-lftprintf`** | Nombre de Librería | Le dice al enlazador que busque un archivo llamado **`libftprintf.a`** dentro de las rutas especificadas. |
-
----
-
-### 3. Ejecución de la Suite
-
-Después de compilar y enlazar, ejecuta el programa de tests generado:
-
-```bash
-./test_runner
+cc test_file_name.c -L. -lftprintf -o test_runner
