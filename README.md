@@ -50,3 +50,25 @@ Una vez que tengas `libftprintf.a` lista, puedes compilar el archivo de pruebas 
 
 ```bash
 cc nombre_del_test.c -L. -lftprintf -o test_runner
+
+---
+
+**⚠️ Sustituye** `nombre_del_test.c` por el nombre del archivo de prueba que desees ejecutar (ej: `test_general.c`).
+
+### 💡 Explicación del Enlazado
+
+El uso de las banderas `-L` y `-l` es crucial para evitar el error `undefined reference to 'ft_printf'`.
+
+| Bandera | Propósito | Explicación |
+| :--- | :--- | :--- |
+| **`-L.`** | Ruta de Librería | Indica al enlazador que busque librerías estáticas en el **directorio actual** (`.`). |
+| **`-lftprintf`** | Nombre de Librería | Le dice al enlazador que busque un archivo llamado **`libftprintf.a`** dentro de las rutas especificadas. |
+
+---
+
+### 3. Ejecución de la Suite
+
+Después de compilar y enlazar, ejecuta el programa de tests generado:
+
+```bash
+./test_runner
