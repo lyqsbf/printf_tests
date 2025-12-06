@@ -94,3 +94,6 @@ If you encounter any of the following issues, please **open an issue** in this r
 2.  **Submit a Pull Request (Optional):** If you have created a new test to fix the problem, you can directly submit a *Pull Request* for us to review and integrate.
 
 **Your collaboration ensures that this test suite is as robust and complete as possible for the entire community.**
+
+---
+A **Spanish** version of the README is also available (see document `README_es.md`)
