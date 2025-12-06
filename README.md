@@ -72,3 +72,25 @@ After compiling and linking, execute the genereted test program:
 
 ```bash
 ./test_runner
+```
+
+---
+
+## 🤝 Contributions (Reporting Issues)
+
+Contributions are highly welcome and are crucial for improving the quality of this test suite!
+
+If you encounter any of the following issues, please **open an issue** in this repository:
+
+1.  **False Negative:** If you believe your `ft_printf` works correctly, but the test suite marks a **FAIL**.
+2.  **False Positive:** If you know your `ft_printf` has a bug, but the test marks **PASS** (meaning a test case is missing).
+3.  **Tester Errors:** If you find any errors in the syntax, logic, or compilation of the tester code itself.
+
+---
+
+### How to Contribute
+
+1.  **Report an Issue:** Open a new *Issues* tab on GitHub and describe the error you found, including the **exact test case** that is failing or missing.
+2.  **Submit a Pull Request (Optional):** If you have created a new test to fix the problem, you can directly submit a *Pull Request* for us to review and integrate.
+
+**Your collaboration ensures that this test suite is as robust and complete as possible for the entire community.**
