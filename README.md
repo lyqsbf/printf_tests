@@ -53,9 +53,9 @@ cc nombre_del_test.c -L. -lftprintf -o test_runner
 
 ---
 
-**⚠️ Sustituye** `nombre_del_test.c` por el nombre del archivo de prueba que desees ejecutar (ej: `test_general.c`).
+## **⚠️ Sustituye** `nombre_del_test.c` por el nombre del archivo de prueba que desees ejecutar (ej: `test_general.c`).
 
-### 💡 Explicación del Enlazado
+## 💡 Explicación del Enlazado
 
 El uso de las banderas `-L` y `-l` es crucial para evitar el error `undefined reference to 'ft_printf'`.
 
