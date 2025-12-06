@@ -38,9 +38,24 @@ Se evalúan situaciones críticas como:
 
 Asegúrate de que tu `ft_printf` esté compilada en un archivo llamado **`libftprintf.a`** y que su prototipo esté disponible en un archivo de cabecera llamado **`ft_printf.h`** en el mismo directorio.
 
-### 2. Compilación
+### 2.1. Compilación
 
 Simplemente ejecuta el comando `make` en la raíz del repositorio:
 
 ```bash
 make
+
+**### 2.2. ⚙️ Compilación y Enlazado (Running the Tests)**
+
+Para ejecutar esta suite de tests, es **obligatorio** que tu implementación de `ft_printf` esté compilada como una **librería estática** (`.a`).
+
+### 1. Preparación de la Librería
+
+Asegúrate de que has compilado tu código fuente (`ft_printf.c` y sus archivos relacionados) para generar el archivo **`libftprintf.a`**. Este archivo debe estar ubicado en el **directorio raíz** de este repositorio de tests.
+
+### 2. Compilación y Enlazado de los Tests
+
+Una vez que tengas `libftprintf.a` lista, puedes compilar el archivo de pruebas y **enlazarlo** con tu librería usando el siguiente comando:
+
+```bash
+cc nombre_del_test.c -L. -lftprintf -o test_runner
