@@ -50,3 +50,25 @@ Once `libftprintf.a` is ready, you can compile the test file and **link** it wit
 
 ```bash
 cc test_file_name.c -L. -lftprintf -o test_runner
+```
+**⚠️ Replace** `test_file_name.c` with the name of the test file you want to execute (e.g., `test_general.c`).
+
+---
+
+## 💡 Explanation of the linking
+
+The use of the flags '-L' and '-l' are crucial to avoid the error `undefined reference to 'ft_printf'`.
+
+| Flag | Purpose | Explanation |
+| :--- | :--- | :--- |
+| **`-L.`** | Library path | Indicates to the linker to search for static libraries in the **current directory** (`.`). |
+| **`-lftprintf`** | Library name | Tells to the linker to search for a library called **`libftprintf.a`** in the specified paths. |
+
+---
+
+### 3. Execution
+
+After compiling and linking, execute the genereted test program:
+
+```bash
+./test_runner
