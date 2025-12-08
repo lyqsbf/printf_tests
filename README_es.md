@@ -2,6 +2,8 @@
 
 Esta es una **suite de pruebas robusta y en constante crecimiento** diseñada para verificar la exactitud, el manejo de errores y el comportamiento de la implementación de tu función `ft_printf`, comparándola rigurosamente con la función estándar `printf` de la librería de C.
 
+**NOTA: tests para el bonus están aún en progreso**
+
 ---
 
 ## 🎯 Cobertura de Tests
