@@ -4,6 +4,8 @@ A **Spanish** version of the README is also available (see document `README_es.m
 ---
 This is a **robust and constantly growing test suite** designed to verify the accuracy, error handling, and behavior of your `ft_printf` function implementation, rigorously comparing it against the standard C library function `printf`.
 
+**NOTE: tests for the bonus part are still in progress**
+
 ---
 
 ## 🎯 Test Coverage
